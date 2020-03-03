@@ -15,7 +15,6 @@ export default function Posts() {
     }, []);
 
     const deletePost = async (id) => {
-        console.log('delete post ' + id)
         await axios.delete(`/api/${id}`)
         fetchData()
     }
