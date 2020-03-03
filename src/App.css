@@ -1,0 +1,87 @@
+.App {
+  /* text-align: center; */
+}
+
+.App h3 {
+  text-align: center;
+}
+
+.naviClass a {
+  margin: 0px 4px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.322);
+  text-decoration: none;
+  padding: 5px 15px;
+  font-weight: bold;
+  color: #ffa4d6;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s ease-in;
+  }
+} */
+.App-header {
+  background-color: #282c34;
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.posts {
+  padding: 20px;
+}
+
+.newPost {
+  padding: 20px;
+  background-color: teal;
+}
+
+.newPost form {
+  text-align: center;
+}
+
+.newPost h2 {
+  text-align: center;
+}
+/*# sourceMappingURL=App.css.map */
