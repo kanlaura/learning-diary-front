@@ -1,4 +1,4 @@
-## Back end and front end in separate branches for now
+### Back end in a separate repository
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
