@@ -7,12 +7,12 @@ const AddNewPost = () => {
     const [info, setInfo] = useState({
         title: "",
         description: "",
-        // timetomaster: 0,
-        // timespent: 0, 
-        // source: "",
-        startlearningdate: new Date(),
+        timetomaster: 0,
+        source: "",
+        startlearningdate: moment(new Date()).format('YYYY-MM-DD'),
         inprogress: 0,
         finishlearningdate: moment(new Date()).format('YYYY-MM-DD'),
+        timespent: 0 
     });
 
     const handleChanges = (event) => {
@@ -37,6 +37,12 @@ const AddNewPost = () => {
                 <input type="text" placeholder="Description" name="description" value={info.description} onChange={handleChanges} />
                 <br />
                 <input type="date" placeholder="Startlearningdate" name="startlearningdate" value={info.startlearningdate} onChange={handleChanges} />
+                <br />
+                <label htmlFor="timetomaster">Estimated working time</label>
+                <br/>
+                <input type="number" name="timetomaster" value={info.timetomaster} onChange={handleChanges}/>
+                <br/>
+                <input type="text" placeholder="Source" name="source" value={info.source} onChange={handleChanges} />
                 <br />
                 Inprogress
                 <br />
