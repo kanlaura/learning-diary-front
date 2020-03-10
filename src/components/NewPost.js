@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import moment from 'moment';
+import { Paper } from '@material-ui/core';
 
 
 const AddNewPost = () => {
@@ -29,7 +30,7 @@ const AddNewPost = () => {
     }
 
     return (
-        <div>
+        <Paper elevation={3} className="newPost">
             <h2>Add new</h2>
             <form>
                 <input type="text" placeholder="Title" name="title" value={info.title} onChange={handleChanges} />
@@ -55,7 +56,7 @@ const AddNewPost = () => {
                 <br /><br />
                 <button type="button" onClick={submit}>Add new</button> 
             </form>
-        </div>
+        </Paper>
     )
 }
 

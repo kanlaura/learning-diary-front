@@ -1,3 +1,7 @@
+* {
+  font-family: Roboto;
+}
+
 .App {
   h3 {
     text-align: center;
@@ -5,16 +9,25 @@
   /* text-align: center; */
 }
 
+
 .naviClass {
+  width: 100vw;
+  // background-color: rgb(46, 46, 46);
+  padding: 0.5em;
+  text-align: center;
 
   a {
     margin: 0px 4px;
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.322);
+    // background-color: rgba(0, 0, 0, 0.322);
     text-decoration: none;
     padding: 5px 15px;
     font-weight: bold;
     color: rgb(255, 164, 214);
+  }
+
+  a:hover {
+    color: rgba(255, 71, 172, 0.603);
   }
 }
 
@@ -31,7 +44,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 80vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,4 +78,19 @@
   h2 {
     text-align: center;
   }
+}
+
+.editPost {
+  margin: auto;
+  padding: 15px;
+  width: 80%;
+  text-align: center;
+}
+
+.allPosts,
+.newPost,
+.Home {
+  text-align: center;
+  margin: 2em;
+  padding: 1em;
 }
