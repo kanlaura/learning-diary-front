@@ -114,6 +114,25 @@
   min-width: 25em;
 }
 
+.allPosts input,
+.newPost input,
+.Home input {
+  width: 15em;
+}
+
+.allPosts .inprogress,
+.newPost .inprogress,
+.Home .inprogress {
+  width: 2em;
+}
+
+.allPosts td,
+.newPost td,
+.Home td {
+  padding-right: 0.7em;
+  text-align: right;
+}
+
 .postsBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,14 +142,17 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
 }
 
 .postBox {
   margin: 1em;
   padding: 1em;
   width: 20em;
-  height: 18em;
+}
+
+.postBox .postContent {
+  height: 15em;
+  text-align: left;
 }
 
 .postBox .Title {
@@ -138,7 +160,7 @@
   color: #ffa4d6;
 }
 
-.postBox p {
+.postBox p, .postBox a {
   margin: 0.2em;
 }
 
@@ -152,7 +174,14 @@
 }
 
 .postBox .postButtons button {
-  margin: 1em;
   width: 5em;
+  margin: 1em;
+  padding: 0.3em;
+  border-radius: 0.3em;
+  border: none;
+}
+
+.postBox .postButtons button:hover {
+  background-color: rgba(255, 164, 214, 0.644);
 }
 /*# sourceMappingURL=App.css.map */

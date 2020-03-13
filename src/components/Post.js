@@ -68,15 +68,16 @@ export default class Post extends Component {
         const { id, title, description, timetomaster, timespent, source, startlearningdate, inprogress, finishlearningdate } = this.props.post
         return (
             <Paper className="postBox">
-                <div>
+                <div className="postContent">
                 <p className="Title"><b>{id} {title}</b></p>
                 <p>{description}</p>
-                <p>Planned working hours: {timetomaster}</p>
                 <a href={`http://${source}`}>{source}</a>
-                <p>{moment(startlearningdate).format('DD.MM.YYYY')}</p>
-                <p>{moment(finishlearningdate).format('DD.MM.YYYY')}</p>
+                <br/><br/>
+                <p>Planned working hours: {timetomaster}</p>
+                <p>started: {moment(startlearningdate).format('DD.MM.YYYY')}</p>
+                <p>ended: {moment(finishlearningdate).format('DD.MM.YYYY')}</p>
                 <p>time spent: {timespent}</p>
-                <p>{inprogress == 0 ? 'inprogress' : 'finnished'}</p>
+                <p>status: {inprogress == 0 ? 'inprogress' : 'finnished'}</p>
                 </div>
                 <div className="postButtons">
                     <button onClick={this.deleteRow}>delete</button>

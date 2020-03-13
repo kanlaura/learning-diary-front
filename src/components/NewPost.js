@@ -45,12 +45,21 @@ const AddNewPost = () => {
                 <br />
                 <input type="text" placeholder="Source" name="source" value={info.source} onChange={handleChanges} />
                 <br />
-                Inprogress
-                <br />
-                <label htmlFor="inprogressYes">yes</label>
-                <input type="radio" value="1" name="inprogress" onClick={handleRadio} />
-                <label htmlFor="inprogressNo">no</label>
-                <input type="radio" value="0" name="inprogress" onClick={handleRadio} />
+                <table>
+                    <tr>
+                        <td>Inprogress </td>
+                        <td>
+                            <label htmlFor="inprogressYes">yes</label>
+                            <input type="radio" value="1" className="inprogress" onClick={handleRadio} />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colSpan="2">
+                            <label htmlFor="inprogressNo">no</label>
+                            <input type="radio" value="0" className="inprogress" onClick={handleRadio} />
+                        </td>
+                    </tr>
+                </table>
                 <br />
                 <input type="date" placeholder="Finishlearningdate" name="finishlearningdate" value={info.finishlearningdate} onChange={handleChanges} />
                 <br /><br />
