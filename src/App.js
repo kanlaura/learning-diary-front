@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import Posts from './components/Posts';
 import NewPost from './components/NewPost';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { Paper } from '@material-ui/core';
 
 
 function App() {
@@ -27,9 +28,9 @@ function App() {
 }
 
 const Home = () => (
-  <div>
+  <Paper elevation={3} className="Home">
     <h1>Home page!!!</h1>
-  </div>
+  </Paper>
 )
 
 export default App;

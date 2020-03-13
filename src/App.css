@@ -1,3 +1,7 @@
+* {
+  font-family: Roboto;
+}
+
 .App {
   /* text-align: center; */
 }
@@ -6,14 +10,23 @@
   text-align: center;
 }
 
+.naviClass {
+  width: 100vw;
+  padding: 0.5em;
+  text-align: center;
+}
+
 .naviClass a {
   margin: 0px 4px;
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.322);
   text-decoration: none;
   padding: 5px 15px;
   font-weight: bold;
   color: #ffa4d6;
+}
+
+.naviClass a:hover {
+  color: rgba(255, 71, 172, 0.603);
 }
 
 .App-logo {
@@ -28,7 +41,7 @@
 } */
 .App-header {
   background-color: #282c34;
-  min-height: 80vh;
+  min-height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,5 +96,63 @@
 
 .newPost h2 {
   text-align: center;
+}
+
+.editPost {
+  margin: auto;
+  padding: 15px;
+  width: 80%;
+  text-align: center;
+}
+
+.allPosts,
+.newPost,
+.Home {
+  text-align: center;
+  margin: 3vh 5vw;
+  padding: 1em;
+  min-width: 25em;
+}
+
+.postsBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.postBox {
+  margin: 1em;
+  padding: 1em;
+  width: 20em;
+  height: 18em;
+}
+
+.postBox .Title {
+  text-align: center;
+  color: #ffa4d6;
+}
+
+.postBox p {
+  margin: 0.2em;
+}
+
+.postBox p:first-of-type {
+  font-size: 1.2em;
+  margin: 0.5em;
+}
+
+.postBox .postButtons {
+  vertical-align: bottom;
+}
+
+.postBox .postButtons button {
+  margin: 1em;
+  width: 5em;
 }
 /*# sourceMappingURL=App.css.map */
