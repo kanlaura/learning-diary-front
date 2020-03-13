@@ -3,6 +3,8 @@
 }
 
 .App {
+  // margin: 0em 5em;
+
   h3 {
     text-align: center;
   }
@@ -91,6 +93,48 @@
 .newPost,
 .Home {
   text-align: center;
-  margin: 2em;
+  margin: 3vh 5vw;
   padding: 1em;
+  min-width: 25em;
+}
+
+.postsBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+}
+
+.postBox {
+  margin: 1em;
+  padding: 1em;
+  width: 20em;
+  height: 18em;
+
+  .postBox div {
+
+  }
+      
+  .Title {
+    text-align: center;
+    color: rgb(255, 164, 214);
+  }
+
+  p {
+    margin: 0.2em;
+  }
+
+  p:first-of-type {
+    font-size: 1.2em;
+    margin: 0.5em;
+  }
+
+  .postButtons {
+    vertical-align: bottom;
+
+    button {
+      margin: 1em;
+      width: 5em;
+    }
+  }
 }

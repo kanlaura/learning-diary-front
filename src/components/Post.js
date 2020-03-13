@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import axios from 'axios';
 import { Paper } from '@material-ui/core';
 
 export default class Post extends Component {
@@ -17,23 +16,25 @@ export default class Post extends Component {
         display: false
     })
 
-    editRow = () => {
-        this.state.display ? this.setState({ ...this.state, display: false }) : this.setState({ ...this.state, display: true })
-
-    }
-
-    deleteRow = () => {
-        this.props.deletePost(this.props.post.id)
-    }
-
     handleChanges = (event) => {
         this.setState({ ...this.state, [event.target.name]: event.target.value });
     }
 
-    edit = async () => {
-        console.log(this.state)
-        await axios.put(`/api/${this.state.id}`, this.state)
+    showNot = () => {
         this.state.display ? this.setState({ ...this.state, display: false }) : this.setState({ ...this.state, display: true })
+    }
+
+    editRow = () => {
+        this.showNot();
+    }
+
+    deleteRow = () => {
+        this.props.delPost(this.props.post.id)
+    }
+
+    edit = async () => {
+        await this.props.edPost(this.state)
+        this.showNot();
     }
 
 
@@ -66,10 +67,23 @@ export default class Post extends Component {
         </form></Paper> : null
         const { id, title, description, timetomaster, timespent, source, startlearningdate, inprogress, finishlearningdate } = this.props.post
         return (
-            <div>
-                <p>{id} {title} {description} {timetomaster} <a href={`http://${source}`}>{source}</a> {moment(startlearningdate).format('DD.MM.YYYY')} {inprogress} {moment(finishlearningdate).format('DD.MM.YYYY')} {timespent} <button onClick={this.deleteRow}>X</button><button onClick={this.editRow}>edit</button></p>
+            <Paper className="postBox">
+                <div>
+                <p className="Title"><b>{id} {title}</b></p>
+                <p>{description}</p>
+                <p>Planned working hours: {timetomaster}</p>
+                <a href={`http://${source}`}>{source}</a>
+                <p>{moment(startlearningdate).format('DD.MM.YYYY')}</p>
+                <p>{moment(finishlearningdate).format('DD.MM.YYYY')}</p>
+                <p>time spent: {timespent}</p>
+                <p>{inprogress == 0 ? 'inprogress' : 'finnished'}</p>
+                </div>
+                <div className="postButtons">
+                    <button onClick={this.deleteRow}>delete</button>
+                    <button onClick={this.editRow}>edit</button>
+                </div>
                 {showEdit}
-            </div>
+            </Paper>
         )
     }
 }
