@@ -24,6 +24,10 @@ export default class Post extends Component {
         this.state.display ? this.setState({ ...this.state, display: false }) : this.setState({ ...this.state, display: true })
     }
 
+    handleRadio = (event) => {
+        this.setState({ ...this.state, inprogress: event.target.value });
+    }
+
     editRow = () => {
         this.showNot();
     }
@@ -54,13 +58,21 @@ export default class Post extends Component {
             <br />
             <input type="text" placeholder="Source" name="source" value={this.state.source} onChange={this.handleChanges} />
             <br />
-            <label htmlFor="inprogress">Inprogress</label>
-            <br />
-            <label htmlFor="inprogressYes">yes</label>
-            <input type="radio" value="1" name="inprogress" onClick={this.handleRadio} />
-            <label htmlFor="inprogressNo">no</label>
-            <input type="radio" value="0" name="inprogress" onClick={this.handleRadio} />
-            <br />
+            <table className="statusRadio">
+                    <tr>
+                        <td><label>Status</label></td>
+                        <td>
+                            <label htmlFor="inprogressYes">inprogress</label>
+                            <input type="radio" value="1" className="inprogress" onClick={this.handleRadio} />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colSpan="2">
+                            <label htmlFor="inprogressNo">finished</label>
+                            <input type="radio" value="0" className="inprogress" onClick={this.handleRadio} />
+                        </td>
+                    </tr>
+                </table>
             <input type="date" placeholder="Finishlearningdate" name="finishlearningdate" value={this.state.finishlearningdate} onChange={this.handleChanges} />
             <br /><br />
             <button type="button" onClick={this.edit}>Edit post</button>
@@ -77,7 +89,7 @@ export default class Post extends Component {
                 <p>started: {moment(startlearningdate).format('DD.MM.YYYY')}</p>
                 <p>ended: {moment(finishlearningdate).format('DD.MM.YYYY')}</p>
                 <p>time spent: {timespent}</p>
-                <p>status: {inprogress == 0 ? 'inprogress' : 'finnished'}</p>
+                <p>status: {inprogress == 1 ? 'inprogress' : 'finished'}</p>
                 </div>
                 <div className="postButtons">
                     <button onClick={this.deleteRow}>delete</button>
