@@ -58,17 +58,16 @@ export default class Post extends Component {
             <br />
             <input type="text" placeholder="Source" name="source" value={this.state.source} onChange={this.handleChanges} />
             <br />
-            <table className="statusRadio">
+             <table>
                     <tr>
-                        <td><label>Status</label></td>
+                        <td>Inprogress </td>
                         <td>
-                            <label htmlFor="inprogressYes">inprogress</label>
                             <input type="radio" value="1" className="inprogress" onClick={this.handleRadio} />
                         </td>
                     </tr>
                     <tr>
-                        <td colSpan="2">
-                            <label htmlFor="inprogressNo">finished</label>
+                        <td>finished</td>
+                        <td>
                             <input type="radio" value="0" className="inprogress" onClick={this.handleRadio} />
                         </td>
                     </tr>

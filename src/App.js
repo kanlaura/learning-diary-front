@@ -18,7 +18,7 @@ function App() {
         < Navigation />
         </header>
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact component={Posts} />
           <Route path="/posts" component={Posts} />
           <Route path="/new" component={NewPost} />
         </Switch>

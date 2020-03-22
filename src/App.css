@@ -3,45 +3,23 @@
 }
 
 .App {
-  /* text-align: center; */
+  width: 100vw;
+  text-align: center;
 }
 
 .App h3 {
   text-align: center;
 }
 
-.naviClass {
-  width: 100vw;
-  padding: 0.5em;
-  text-align: center;
-}
-
-.naviClass a {
-  margin: 0px 4px;
-  border-radius: 15px;
-  text-decoration: none;
-  padding: 5px 15px;
-  font-weight: bold;
-  color: #ffa4d6;
-}
-
-.naviClass a:hover {
-  color: rgba(255, 71, 172, 0.603);
-}
-
 .App-logo {
-  height: 20vmin;
+  max-height: 20vmin;
   pointer-events: none;
 }
 
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s ease-in;
-  }
-} */
 .App-header {
+  padding: 2em;
   background-color: #282c34;
-  min-height: 50vh;
+  min-height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,26 +37,23 @@
   color: white;
 }
 
-@-webkit-keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.naviClass {
+  background-color: #2e2e2e;
+  padding: 0.5em;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.naviClass a {
+  margin: 0px 4px;
+  border-radius: 15px;
+  text-decoration: none;
+  padding: 5px 15px;
+  font-weight: bold;
+  color: #ffa4d6;
+}
+
+.naviClass a:hover {
+  color: rgba(255, 71, 172, 0.603);
 }
 
 .posts {
@@ -101,27 +76,60 @@
 .allPosts,
 .newPost,
 .Home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  margin: 3vh 5vw;
+  margin: 3vh 3vw;
   padding: 1em;
-  min-width: 25em;
 }
 
 .allPosts input,
 .newPost input,
 .Home input {
   width: 15em;
+  margin: 0.5em;
 }
 
-.allPosts .inprogress,
-.newPost .inprogress,
-.Home .inprogress {
-  width: 2em;
+.allPosts .inputBox,
+.newPost .inputBox,
+.Home .inputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 40vw;
 }
 
-.allPosts td,
-.newPost td,
-.Home td {
+.allPosts .inputBox .inprogress,
+.newPost .inputBox .inprogress,
+.Home .inputBox .inprogress {
+  width: 4.5em;
+}
+
+.allPosts .inputBox td,
+.newPost .inputBox td,
+.Home .inputBox td {
   padding-right: 0.7em;
   text-align: right;
 }
@@ -130,6 +138,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 94vw;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -141,7 +150,7 @@
   height: 20em;
   margin: 1em;
   padding: 1em;
-  width: 20em;
+  width: 16em;
 }
 
 .postBox .postContent {
@@ -191,10 +200,5 @@
 
 .editPost form > label {
   padding: 0em 1em;
-}
-
-.editPost .statusRadio {
-  width: 100%;
-  padding: 0em 1em 0em 2em;
 }
 /*# sourceMappingURL=App.css.map */
