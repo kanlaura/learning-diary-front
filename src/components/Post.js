@@ -24,6 +24,10 @@ export default class Post extends Component {
         this.state.display ? this.setState({ ...this.state, display: false }) : this.setState({ ...this.state, display: true })
     }
 
+    handleRadio = (event) => {
+        this.setState({ ...this.state, inprogress: event.target.value });
+    }
+
     editRow = () => {
         this.showNot();
     }
@@ -54,13 +58,20 @@ export default class Post extends Component {
             <br />
             <input type="text" placeholder="Source" name="source" value={this.state.source} onChange={this.handleChanges} />
             <br />
-            <label htmlFor="inprogress">Inprogress</label>
-            <br />
-            <label htmlFor="inprogressYes">yes</label>
-            <input type="radio" value="1" name="inprogress" onClick={this.handleRadio} />
-            <label htmlFor="inprogressNo">no</label>
-            <input type="radio" value="0" name="inprogress" onClick={this.handleRadio} />
-            <br />
+             <table>
+                    <tr>
+                        <td>Inprogress </td>
+                        <td>
+                            <input type="radio" value="1" className="inprogress" onClick={this.handleRadio} />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>finished</td>
+                        <td>
+                            <input type="radio" value="0" className="inprogress" onClick={this.handleRadio} />
+                        </td>
+                    </tr>
+                </table>
             <input type="date" placeholder="Finishlearningdate" name="finishlearningdate" value={this.state.finishlearningdate} onChange={this.handleChanges} />
             <br /><br />
             <button type="button" onClick={this.edit}>Edit post</button>
@@ -68,15 +79,16 @@ export default class Post extends Component {
         const { id, title, description, timetomaster, timespent, source, startlearningdate, inprogress, finishlearningdate } = this.props.post
         return (
             <Paper className="postBox">
-                <div>
+                <div className="postContent">
                 <p className="Title"><b>{id} {title}</b></p>
                 <p>{description}</p>
-                <p>Planned working hours: {timetomaster}</p>
                 <a href={`http://${source}`}>{source}</a>
-                <p>{moment(startlearningdate).format('DD.MM.YYYY')}</p>
-                <p>{moment(finishlearningdate).format('DD.MM.YYYY')}</p>
+                <br/><br/>
+                <p>Planned working hours: {timetomaster}</p>
+                <p>started: {moment(startlearningdate).format('DD.MM.YYYY')}</p>
+                <p>ended: {moment(finishlearningdate).format('DD.MM.YYYY')}</p>
                 <p>time spent: {timespent}</p>
-                <p>{inprogress == 0 ? 'inprogress' : 'finnished'}</p>
+                <p>status: {inprogress == 1 ? 'inprogress' : 'finished'}</p>
                 </div>
                 <div className="postButtons">
                     <button onClick={this.deleteRow}>delete</button>

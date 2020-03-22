@@ -32,26 +32,27 @@ const AddNewPost = () => {
     return (
         <Paper elevation={3} className="newPost">
             <h2>Add new</h2>
-            <form>
+            <form className="inputBox">
                 <input type="text" placeholder="Title" name="title" value={info.title} onChange={handleChanges} />
-                <br />
                 <input type="text" placeholder="Description" name="description" value={info.description} onChange={handleChanges} />
-                <br />
                 <input type="date" placeholder="Startlearningdate" name="startlearningdate" value={info.startlearningdate} onChange={handleChanges} />
-                <br />
                 <label htmlFor="timetomaster">Estimated working time</label>
-                <br />
                 <input type="number" name="timetomaster" value={info.timetomaster} onChange={handleChanges} />
-                <br />
                 <input type="text" placeholder="Source" name="source" value={info.source} onChange={handleChanges} />
-                <br />
-                Inprogress
-                <br />
-                <label htmlFor="inprogressYes">yes</label>
-                <input type="radio" value="1" name="inprogress" onClick={handleRadio} />
-                <label htmlFor="inprogressNo">no</label>
-                <input type="radio" value="0" name="inprogress" onClick={handleRadio} />
-                <br />
+                <table>
+                    <tr>
+                        <td>Inprogress </td>
+                        <td>
+                            <input type="radio" value="1" className="inprogress" onClick={handleRadio} />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>finished</td>
+                        <td>
+                            <input type="radio" value="0" className="inprogress" onClick={handleRadio} />
+                        </td>
+                    </tr>
+                </table>
                 <input type="date" placeholder="Finishlearningdate" name="finishlearningdate" value={info.finishlearningdate} onChange={handleChanges} />
                 <br /><br />
                 <button type="button" onClick={submit}>Add new</button>

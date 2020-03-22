@@ -3,18 +3,35 @@
 }
 
 .App {
+  width: 100vw;
+
   // margin: 0em 5em;
 
   h3 {
     text-align: center;
   }
-  /* text-align: center; */
+  text-align: center;
 }
 
+.App-logo {
+  max-height: 20vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  padding: 2em;
+  background-color: #282c34;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 
 .naviClass {
-  width: 100vw;
-  // background-color: rgb(46, 46, 46);
+  background-color: rgb(46, 46, 46);
   padding: 0.5em;
   text-align: center;
 
@@ -30,39 +47,6 @@
 
   a:hover {
     color: rgba(255, 71, 172, 0.603);
-  }
-}
-
-.App-logo {
-  height: 20vmin;
-  pointer-events: none;
-}
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s ease-in;
-  }
-} */
-
-.App-header {
-  background-color: #282c34;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
 
@@ -82,37 +66,58 @@
   }
 }
 
-.editPost {
-  margin: auto;
-  padding: 15px;
-  width: 80%;
-  text-align: center;
-}
-
 .allPosts,
 .newPost,
 .Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin: 3vh 5vw;
+  margin: 3vh 3vw;
   padding: 1em;
-  min-width: 25em;
+
+  input {
+    width: 15em;
+    margin: 0.5em
+  }
+
+  .inputBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 40vw;
+
+    .inprogress {
+      width: 4.5em;
+    }
+  
+      td {
+        padding-right: 0.7em;
+        text-align: right;
+      }
+  }
 }
 
 .postsBox {
   display: flex;
+  width: 94vw;
   flex-wrap: wrap;
   justify-content: center;
-  height: 100%;
 }
 
 .postBox {
+  height: 20em;
   margin: 1em;
   padding: 1em;
-  width: 20em;
-  height: 18em;
+  width: 16em;
 
-  .postBox div {
-
+  .postContent {
+    padding: 0% 10%;
+    height: 15em;
+    text-align: left;
   }
       
   .Title {
@@ -120,7 +125,7 @@
     color: rgb(255, 164, 214);
   }
 
-  p {
+  p, a {
     margin: 0.2em;
   }
 
@@ -133,8 +138,29 @@
     vertical-align: bottom;
 
     button {
-      margin: 1em;
       width: 5em;
+      margin: 1em;
+      padding: 0.3em;
+      border-radius: 0.3em;
+      border: none;
+    }
+
+    button:hover {
+      background-color: rgba(255, 164, 214, 0.644);
+    }
+  }
+}
+
+.editPost {
+  position: relative;
+  top: -2.8em;
+  margin: auto;
+  padding: 15px;
+  width: 80%;
+  text-align: center;
+
+  form { > label {
+    padding: 0em 1em
     }
   }
 }

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = "http://weeklylaura-ebenv.eba-yvpgbuzq.eu-west-1.elasticbeanstalk.com/api"
+const URL = "http://localhost:3000/api/"
 
 export const editPost = async (post) => {
     let editedPost = await axios.put(`${URL}/${post.id}`, post)

@@ -3,45 +3,23 @@
 }
 
 .App {
-  /* text-align: center; */
+  width: 100vw;
+  text-align: center;
 }
 
 .App h3 {
   text-align: center;
 }
 
-.naviClass {
-  width: 100vw;
-  padding: 0.5em;
-  text-align: center;
-}
-
-.naviClass a {
-  margin: 0px 4px;
-  border-radius: 15px;
-  text-decoration: none;
-  padding: 5px 15px;
-  font-weight: bold;
-  color: #ffa4d6;
-}
-
-.naviClass a:hover {
-  color: rgba(255, 71, 172, 0.603);
-}
-
 .App-logo {
-  height: 20vmin;
+  max-height: 20vmin;
   pointer-events: none;
 }
 
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s ease-in;
-  }
-} */
 .App-header {
+  padding: 2em;
   background-color: #282c34;
-  min-height: 50vh;
+  min-height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,26 +37,23 @@
   color: white;
 }
 
-@-webkit-keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.naviClass {
+  background-color: #2e2e2e;
+  padding: 0.5em;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.naviClass a {
+  margin: 0px 4px;
+  border-radius: 15px;
+  text-decoration: none;
+  padding: 5px 15px;
+  font-weight: bold;
+  color: #ffa4d6;
+}
+
+.naviClass a:hover {
+  color: rgba(255, 71, 172, 0.603);
 }
 
 .posts {
@@ -98,39 +73,90 @@
   text-align: center;
 }
 
-.editPost {
-  margin: auto;
-  padding: 15px;
-  width: 80%;
-  text-align: center;
-}
-
 .allPosts,
 .newPost,
 .Home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  margin: 3vh 5vw;
+  margin: 3vh 3vw;
   padding: 1em;
-  min-width: 25em;
+}
+
+.allPosts input,
+.newPost input,
+.Home input {
+  width: 15em;
+  margin: 0.5em;
+}
+
+.allPosts .inputBox,
+.newPost .inputBox,
+.Home .inputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 40vw;
+}
+
+.allPosts .inputBox .inprogress,
+.newPost .inputBox .inprogress,
+.Home .inputBox .inprogress {
+  width: 4.5em;
+}
+
+.allPosts .inputBox td,
+.newPost .inputBox td,
+.Home .inputBox td {
+  padding-right: 0.7em;
+  text-align: right;
 }
 
 .postsBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 94vw;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
 }
 
 .postBox {
+  height: 20em;
   margin: 1em;
   padding: 1em;
-  width: 20em;
-  height: 18em;
+  width: 16em;
+}
+
+.postBox .postContent {
+  padding: 0% 10%;
+  height: 15em;
+  text-align: left;
 }
 
 .postBox .Title {
@@ -138,7 +164,7 @@
   color: #ffa4d6;
 }
 
-.postBox p {
+.postBox p, .postBox a {
   margin: 0.2em;
 }
 
@@ -152,7 +178,27 @@
 }
 
 .postBox .postButtons button {
-  margin: 1em;
   width: 5em;
+  margin: 1em;
+  padding: 0.3em;
+  border-radius: 0.3em;
+  border: none;
+}
+
+.postBox .postButtons button:hover {
+  background-color: rgba(255, 164, 214, 0.644);
+}
+
+.editPost {
+  position: relative;
+  top: -2.8em;
+  margin: auto;
+  padding: 15px;
+  width: 80%;
+  text-align: center;
+}
+
+.editPost form > label {
+  padding: 0em 1em;
 }
 /*# sourceMappingURL=App.css.map */
