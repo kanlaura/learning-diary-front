@@ -11,6 +11,10 @@
     text-align: center;
   }
   text-align: center;
+
+  label {
+    font-weight: bolder;
+  }
 }
 
 .App-logo {
@@ -77,9 +81,19 @@
   margin: 3vh 3vw;
   padding: 1em;
 
-  input {
+  input, textarea {
+    border-radius: 0.4em;
+    padding: 0.3em;
     width: 15em;
-    margin: 0.5em
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  hr {
+    border-top: rgba(255, 164, 214, 0.575) solid 0.1em;
+    border-bottom: none;
+    width: 10em;
+    margin: 1.3em;
   }
 
   .inputBox {
@@ -98,6 +112,18 @@
         padding-right: 0.7em;
         text-align: right;
       }
+
+      button {
+        width: 5em;
+        margin: 1em;
+        padding: 0.3em;
+        border-radius: 0.3em;
+        border: none;
+      }
+
+      button:hover {
+        background-color: rgba(255, 164, 214, 0.644);
+      }
   }
 }
 
@@ -109,15 +135,19 @@
 }
 
 .postBox {
-  height: 20em;
+  min-height: 20em;
   margin: 1em;
   padding: 1em;
   width: 16em;
 
   .postContent {
     padding: 0% 10%;
-    height: 15em;
+    min-height: 23em;
     text-align: left;
+
+    a, .Descrition {
+      font-size: smaller;
+    }
   }
       
   .Title {
@@ -164,3 +194,4 @@
     }
   }
 }
+
